@@ -1,0 +1,26 @@
+Source: ttf-wqy-microhei
+Section: x11
+Priority: optional
+Maintainer: Zhengpeng Hou <zhengpeng-hou@ubuntu.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.1
+Homepage: http://wqy.sourceforge.net/
+
+Package: ttf-wqy-microhei
+Architecture: all
+Recommends: x-ttcidfont-conf (>= 10), fontconfig (>= 2.3.1-1)
+Description: A droid derived Sans-Seri style CJK font
+ WenQuanYi Micro Hei font family is a Sans-Serif style (also known as Hei,
+ Gothic or Dotum among the Chinese/Japanese/Korean users) high quality
+ CJK outline font. It was derived from "Droid Sans Fallback", "Droid
+ Sans" and "Droid Sans Mono" released by Google Corp. This font package
+ contains two faces, "Micro Hei" and "Micro Hei Mono", in form of a
+ True-Type Collection (ttc) file. All the unified CJK Han glyphs, i.e.
+ GBK Hanzi, in the range of U+4E00-U+9FC3 defined in Unicode Standard 5.1
+ are covered, with additional support to many other international
+ languages such as Latin, Extended Latin, Hanguls and Kanas. The font
+ file is extremely compact (~5M) compared with most known CJK fonts.
+ As a result, it can be used for hand-held devices or embedded systems, or
+ used on PC with a significantly small memory footprint. Because both
+ font faces carry hinting and kerning instructions for Latin glyphs,
+ they are the excellent choices for desktop fonts.

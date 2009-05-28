@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	touch build-stamp
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean 
+	dh_install wqy-microhei.ttc usr/share/fonts/truetype/wqy/
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs AUTHORS.txt README.txt 
+	dh_installchangelogs ChangeLog.txt
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep
+.PHONY: build clean binary-indep binary-arch binary install
