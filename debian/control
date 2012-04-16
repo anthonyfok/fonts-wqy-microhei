@@ -8,7 +8,7 @@ Homepage: http://wqy.sourceforge.net/
 
 Package: ttf-wqy-microhei
 Architecture: all
-Recommends: x-ttcidfont-conf (>= 10), fontconfig (>= 2.3.1-1)
+Recommends: fontconfig (>= 2.3.1-1)
 Description: A droid derived Sans-Seri style CJK font
  WenQuanYi Micro Hei font family is a Sans-Serif style (also known as Hei,
  Gothic or Dotum among the Chinese/Japanese/Korean users) high quality

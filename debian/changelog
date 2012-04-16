@@ -1,3 +1,10 @@
+ttf-wqy-microhei (0.2.0-beta-1ubuntu1) precise; urgency=low
+
+  * Drop recommends on x-ttcidfont-conf, which is obsolete.  Closes: #660060.
+  * Drop obsolete maintainer scripts; fontconfig uses triggers.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 16 Apr 2012 11:16:07 -0700
+
 ttf-wqy-microhei (0.2.0-beta-1) unstable; urgency=low
 
   * Initial release. (Closes: #530935)
