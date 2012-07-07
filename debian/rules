@@ -2,7 +2,7 @@
 
 
 build: build-stamp
-build-stamp:
+build-stamp: 
 	dh_testdir
 	touch build-stamp
 clean:

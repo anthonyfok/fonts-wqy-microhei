@@ -1,7 +1,7 @@
 Source: ttf-wqy-microhei
 Section: x11
 Priority: optional
-Maintainer: Zhengpeng Hou <zhengpeng-hou@ubuntu.com>
+Maintainer: Zhengpeng Hou <zhengpeng.hou@gmail.com>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.1
 Homepage: http://wqy.sourceforge.net/
