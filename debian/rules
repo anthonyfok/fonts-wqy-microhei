@@ -16,6 +16,7 @@ install: build
 	dh_testroot
 	dh_clean 
 	dh_install wqy-microhei.ttc usr/share/fonts/truetype/wqy/
+	dh_link
 
 binary-indep: build install
 	dh_testdir
