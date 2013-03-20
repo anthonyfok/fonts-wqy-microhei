@@ -9,6 +9,7 @@ Homepage: http://wqy.sourceforge.net/
 
 Package: ttf-wqy-microhei
 Architecture: all
+Multi-Arch: foreign
 Recommends: fontconfig (>= 2.3.1-1)
 Description: A droid derived Sans-Seri style CJK font
  WenQuanYi Micro Hei font family is a Sans-Serif style (also known as Hei,
