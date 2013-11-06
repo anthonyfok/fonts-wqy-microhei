@@ -1,3 +1,10 @@
+ttf-wqy-microhei (0.2.0-beta-1.1ubuntu4) trusty; urgency=low
+
+  * debian/65-ttf-wqy-microhei.conf:
+    Outdated DejaVu bindings removed (LP: #1173571).
+
+ -- Gunnar Hjalmarsson <gunnarhj@ubuntu.com>  Wed, 06 Nov 2013 03:23:00 +0100
+
 ttf-wqy-microhei (0.2.0-beta-1.1ubuntu3) raring; urgency=low
 
   * Mark as Multi-Arch: foreign (LP: #1123710)
