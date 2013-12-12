@@ -1,23 +1,29 @@
-Source: ttf-wqy-microhei
-Section: x11
+Source: fonts-wqy-microhei
+Section: fonts
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Zhengpeng Hou <zhengpeng.hou@gmail.com>
-Build-Depends: debhelper (>= 7)
-Standards-Version: 3.8.1
-Homepage: http://wqy.sourceforge.net/
+Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
+Uploaders: Zhengpeng Hou <zhengpeng-hou@ubuntu.com>, Anthony Fok <foka@debian.org>
+Build-Depends: debhelper (>= 9), xdelta3
+Standards-Version: 3.9.5
+Homepage: http://wenq.org/
+Vcs-Git: git://anonscm.debian.org/pkg-fonts/fonts-wqy-microhei.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-fonts/fonts-wqy-microhei.git;a=summary
 
-Package: ttf-wqy-microhei
+Package: fonts-wqy-microhei
 Architecture: all
 Multi-Arch: foreign
+Depends: ${misc:Depends}
 Recommends: fontconfig (>= 2.3.1-1)
-Description: A droid derived Sans-Seri style CJK font
- WenQuanYi Micro Hei font family is a Sans-Serif style (also known as Hei,
+Replaces: ttf-wqy-microhei (<< 0.2.0-beta-2)
+Provides: ttf-wqy-microhei
+Breaks: ttf-wqy-microhei (<< 0.2.0-beta-2)
+Description: Sans-serif style CJK font derived from Droid
+ WenQuanYi Micro Hei font family is a sans-serif style (also known as Hei,
  Gothic or Dotum among the Chinese/Japanese/Korean users) high quality
  CJK outline font. It was derived from "Droid Sans Fallback", "Droid
  Sans" and "Droid Sans Mono" released by Google Corp. This font package
  contains two faces, "Micro Hei" and "Micro Hei Mono", in form of a
- True-Type Collection (ttc) file. All the unified CJK Han glyphs, i.e.
+ TrueType Collection (ttc) file. All the unified CJK Han glyphs, i.e.
  GBK Hanzi, in the range of U+4E00-U+9FC3 defined in Unicode Standard 5.1
  are covered, with additional support to many other international
  languages such as Latin, Extended Latin, Hanguls and Kanas. The font
@@ -25,4 +31,12 @@ Description: A droid derived Sans-Seri style CJK font
  As a result, it can be used for hand-held devices or embedded systems, or
  used on PC with a significantly small memory footprint. Because both
  font faces carry hinting and kerning instructions for Latin glyphs,
- they are the excellent choices for desktop fonts.
+ they are excellent choices for desktop fonts.
+
+Package: ttf-wqy-microhei
+Depends: fonts-wqy-microhei, ${misc:Depends}
+Architecture: all
+Section: oldlibs
+Priority: extra
+Description: transitional dummy package
+ This package is a dummy transitional package. It can be safely removed.

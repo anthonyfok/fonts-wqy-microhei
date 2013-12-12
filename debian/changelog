@@ -1,29 +1,76 @@
-ttf-wqy-microhei (0.2.0-beta-1.1ubuntu4) trusty; urgency=low
+fonts-wqy-microhei (0.2.0-beta-2) unstable; urgency=low
 
-  * debian/65-ttf-wqy-microhei.conf:
-    Outdated DejaVu bindings removed (LP: #1173571).
+  * Fix incorrect advanceWidths in hmtx for composite glyphs, which
+    had caused Korean Hangul glyphs to stack on top of each other.
 
- -- Gunnar Hjalmarsson <gunnarhj@ubuntu.com>  Wed, 06 Nov 2013 03:23:00 +0100
+    From the bug report:
 
-ttf-wqy-microhei (0.2.0-beta-1.1ubuntu3) raring; urgency=low
+        The issue appears when using ttf-wqy-microhei in Chromium
+        (and possibly other programs).
+        See https://code.google.com/p/chromium/issues/detail?id=233851 for
+        the original report against Chromium.
 
-  * Mark as Multi-Arch: foreign (LP: #1123710)
+        The issue itself is that the version of ttf-wqy-microhei in the
+        repository was created with an old version of FontForge which
+        created incorrect advanceWidths in the htmx tables of this font.
+        As a result many Korean glyphs have tiny advance withs (1/8 of
+        what they should be) and so stack on top of each other when linear
+        metrics are requested and used.
 
- -- Scott Ritchie <scottritchie@ubuntu.com>  Wed, 20 Mar 2013 19:25:13 +0100
+    Many thanks to Chromium developer Ben Wagner (Bungeman) for his
+    excellent and meticulous work in investigating the issue and in 
+    creating a patched version of wqy-microhei.ttc to fix the issue.
+    (Closes: #714641; LP: #1258520)
 
-ttf-wqy-microhei (0.2.0-beta-1.1ubuntu2) raring; urgency=low
+    Also thanks to upstream author Qianqian Fang for giving us the go-ahead
+    to use Bungeman's version, and will investigate an upstream update
+    if he can find the time.
 
-  * Oops, forgot to <prefer> for serif. 
+    To facilitate adoption by other distributions, and for record keeping,
+    here are the checksums of wqy-microhei.ttc before and after the patch:
 
- -- Iain Lane <iain.lane@canonical.com>  Thu, 07 Feb 2013 09:24:37 +0000
+    Checksum of original wqy-microhei.ttc with incorrect hmtx advanceWidths:
+     - MD5:    966af48e02884546677a2f762f6725b9
+     - SHA1:   42467ef798a8f7bd8192a869ac7e05e17132c5c6
+     - SHA256: e4bca8df123ce01b104780f576ea1a58b9a5ff1662a91124b6d3180cb6c88212
 
-ttf-wqy-microhei (0.2.0-beta-1.1ubuntu1) raring; urgency=low
+    Checksum of wqy-microhei.ttc patched by Bungeman:
+     - MD5:    a7ff47b49e15875c113ed77c491953ab
+     - SHA1:   cd9c1b74f137db79c5fd403002cb1132d30f749b
+     - SHA256: 2420e8078af796b19a3f6ef13de527a1a91c1e7171eea115926c614ced1009b3
 
-  * Add fontconfig file taken from Fedora and Ubuntu's existing
-    language-selector-common configuration.
-  * Return Micro Hei fonts for serif/sans-serif/monospace generics 
+  * Acknowledge NMU of ttf-wqy-microhei 0.2.0-beta-1.1 by Aron Xu
+    and contributed patch from 0.2.0-beta-1ubuntu1 by Steve Langasek
+    (Debian Bug#660060)
 
- -- Iain Lane <iain.lane@canonical.com>  Wed, 06 Feb 2013 11:23:24 +0000
+  * Acknowledge improvements to ttf-wqy-microhei in Ubuntu
+    (0.2.0-beta-1.1ubuntu1 to 0.2.0-beta-1.1ubuntu4) by
+    Iain Lane, Scott Ritchie and Gunnar Hjalmarsson:
+     - New fontconfig file 65-wqy-microhei.conf
+     - Mark as Multi-Arch: foreign (Closes: #705180)
+
+    However, in 65-wqy-microhei.conf, I decide to remove <prefer> for serif
+    because WenQuanYi Micro Hei is a sans-serif font and there exist other
+    real serif CJK fonts in the Debian repository.
+
+  * Learning from Christian Perrier in his update to fonts-wqy-zenhei:
+     - Rename source package to "fonts-wqy-microhei" to fit the Font Packages
+       Naming Policy.
+     - Use dh minimal rules file
+     - Update Standards to 3.9.5 (checked)
+     - Bump debhelper compatibility to 9
+     - Use xz extreme compression for deb packages
+     - Use git for packaging: adapt Vcs-* fields
+
+  * Convert to machine-readable debian/copyright version 1.0
+  * Change upstream home page to http://wenq.org/
+  * Following the example of fonts-wqy-zenhei, set Debian Fonts Task Force
+    as the Maintainer.
+  * Add myself to the list of Uploaders
+  * Last but not least, many thanks to original maintainer Zhengpeng Hou
+    for generously allowing me do whatever I like to this package.  :-)    
+
+ -- Anthony Fok <foka@debian.org>  Thu, 12 Dec 2013 08:38:16 +0800
 
 ttf-wqy-microhei (0.2.0-beta-1.1) unstable; urgency=low
 

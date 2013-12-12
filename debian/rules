@@ -1,34 +1,17 @@
 #!/usr/bin/make -f
+%:
+	dh $@
 
+#
+#     xdelta3 -S djw -9 -s a/wqy-microhei.ttc b/wqy-microhei.ttc \
+#                       debian/wqy-microhei.ttc.xd3
+override_dh_auto_build:
+	mkdir -p patched
+	xdelta3 -d -s wqy-microhei.ttc debian/wqy-microhei.ttc.xd3 \
+		   patched/wqy-microhei.ttc
 
-build: build-stamp
-build-stamp: 
-	dh_testdir
-	touch build-stamp
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	dh_clean 
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -Sextreme -z9
 
-install: build
-	dh_testdir
-	dh_testroot
-	dh_clean 
-	dh_install wqy-microhei.ttc usr/share/fonts/truetype/wqy/
-	dh_link
-
-binary-indep: build install
-	dh_testdir
-	dh_testroot
-	dh_installdocs AUTHORS.txt README.txt 
-	dh_installchangelogs ChangeLog.txt
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep
-.PHONY: build clean binary-indep binary-arch binary install
+override_dh_auto_clean:
+	rm -rf patched/

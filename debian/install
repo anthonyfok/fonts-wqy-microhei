@@ -1,0 +1,2 @@
+patched/wqy-microhei.ttc usr/share/fonts/truetype/wqy/
+debian/65-wqy-microhei.conf etc/fonts/conf.avail/
