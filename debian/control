@@ -6,8 +6,8 @@ Uploaders: Zhengpeng Hou <zhengpeng-hou@ubuntu.com>, Anthony Fok <foka@debian.or
 Build-Depends: debhelper (>= 9), xdelta3
 Standards-Version: 3.9.5
 Homepage: http://wenq.org/
-Vcs-Git: git://anonscm.debian.org/pkg-fonts/fonts-wqy-microhei.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-fonts/fonts-wqy-microhei.git;a=summary
+Vcs-Git: https://anonscm.debian.org/git/pkg-fonts/fonts-wqy-microhei.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-fonts/fonts-wqy-microhei.git
 
 Package: fonts-wqy-microhei
 Architecture: all
