@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
 Uploaders: Zhengpeng Hou <zhengpeng-hou@ubuntu.com>, Anthony Fok <foka@debian.org>
 Build-Depends: debhelper (>= 10), xdelta3
-Standards-Version: 3.9.5
+Standards-Version: 4.0.0
 Homepage: http://wenq.org/
 Vcs-Git: https://anonscm.debian.org/git/pkg-fonts/fonts-wqy-microhei.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-fonts/fonts-wqy-microhei.git

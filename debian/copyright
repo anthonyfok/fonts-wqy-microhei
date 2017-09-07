@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: WenQuanYi Micro Hei 文泉驿微米黑
 Upstream-Contact: Qianqian Fang <fangq #nmr _mgh _harvard _edu>
 Source: https://downloads.sourceforge.net/project/wqy/wqy-microhei/0.2.0-beta/wqy-microhei-0.2.0-beta.tar.gz
