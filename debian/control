@@ -32,11 +32,3 @@ Description: Sans-serif style CJK font derived from Droid
  used on PC with a significantly small memory footprint. Because both
  font faces carry hinting and kerning instructions for Latin glyphs,
  they are excellent choices for desktop fonts.
-
-Package: ttf-wqy-microhei
-Depends: fonts-wqy-microhei, ${misc:Depends}
-Architecture: all
-Section: oldlibs
-Priority: extra
-Description: transitional dummy package
- This package is a dummy transitional package. It can be safely removed.
