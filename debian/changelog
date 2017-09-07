@@ -1,3 +1,14 @@
+fonts-wqy-microhei (0.2.0-beta-3) unstable; urgency=medium
+
+  * Use new cgit HTTPS URLs for Vcs-Git and Vcs-Browser
+  * Use debhelper (>= 10)
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Drop transitional dummy ttf-wqy-microhei package (Closes: #868207)
+  * Update debian/gbp.conf
+
+ -- Anthony Fok <foka@debian.org>  Thu, 07 Sep 2017 06:09:59 -0600
+
 fonts-wqy-microhei (0.2.0-beta-2) unstable; urgency=low
 
   * Fix incorrect advanceWidths in hmtx for composite glyphs, which
